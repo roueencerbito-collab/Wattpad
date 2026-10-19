@@ -1,5 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
+  STORIES.forEach(story => {
+  story.cover = story.cover.replace(/^images\//, "");
+  story.image = story.image.replace(/^images\//, "");
+});
   const themeToggle = document.getElementById('themeToggle');
   const savedTheme = localStorage.getItem('storyverse-theme');
   if (savedTheme === 'dark') document.body.classList.add('dark');
